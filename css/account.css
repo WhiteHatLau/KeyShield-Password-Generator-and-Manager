@@ -1,0 +1,186 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #C7F0F5; /* Fondo azul claro */
+    color: #03132C; /* Texto azul muy oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar que crezca */
+    margin: 0;
+}
+
+/* Contenedor principal de autenticación */
+.auth-container {
+    background-color: #F4FBFC; /* Fondo suave */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px; /* Aumentar el ancho máximo para acomodar ambos formularios */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin-top: 5%; /* Reducido el margen superior */
+    margin-bottom: 5%; /* Añadido margen inferior */
+    padding-bottom: 20px; /* Añadido padding inferior */
+}
+
+/* Cabecera con logo */
+.auth-header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 120px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* Contenedor de formularios en paralelo */
+.forms-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo de formularios */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    text-align: left;
+}
+
+h2 {
+    color: #16456F;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 1em;
+    color: #03132C;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #16456F;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #03132C;
+    background-color: #ffffff;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+    color: #7F8C8D; /* Placeholder gris */
+}
+
+/* Botón de acción principal */
+.primary-btn {
+    background-color: #16456F; /* Azul oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background-color: #03132C; /* Azul más oscuro en hover */
+}
+
+/* Links de formulario */
+a {
+    color: #16456F;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.auth-footer {
+    font-size: 0.9em;
+    color: #03132C;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; /* Asegura separación superior en el footer */
+    margin-bottom: 20px; /* Añade margen inferior para separación */
+}
+
+.auth-footer p {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #16456F;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .forms-wrapper {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .auth-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .logo {
+        max-width: 100px; /* Tamaño más pequeño del logo en móviles */
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .primary-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
